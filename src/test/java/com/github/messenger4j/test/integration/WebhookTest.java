@@ -1,5 +1,15 @@
 package com.github.messenger4j.test.integration;
 
+import static java.util.Optional.empty;
+import static java.util.Optional.of;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+
 import com.github.messenger4j.Messenger;
 import com.github.messenger4j.exception.MessengerVerificationException;
 import com.github.messenger4j.webhook.Event;
@@ -8,23 +18,15 @@ import com.github.messenger4j.webhook.event.attachment.Attachment;
 import com.github.messenger4j.webhook.event.attachment.RichMediaAttachment;
 import com.github.messenger4j.webhook.event.common.PriorMessage;
 import com.github.messenger4j.webhook.event.nlp.NLPEntity;
-import org.junit.Assert;
-import org.junit.Test;
-import org.mockito.ArgumentCaptor;
-import org.skyscreamer.jsonassert.JSONAssert;
-
 import java.net.URL;
 import java.time.Instant;
 import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
-
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.assertThat;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import org.junit.Assert;
+import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 /**
  * @author Max Grabenhorst

@@ -4,7 +4,6 @@ package com.github.messenger4j.internal.gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-
 import java.time.Instant;
 import java.util.Optional;
 
